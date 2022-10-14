@@ -1,9 +1,14 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
 const app = express();
 const cors = require('cors');
 const path = require('path');
 const morgan = require('morgan');
+
+mongoose.connect('mongodb://localhost/mevn-database')
+  .then(db => console.log('DB is connected'))
+  .catch(err => console.error(err));
 
 // Settings
 app.set('port', process.env.PORT || 3000);
