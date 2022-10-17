@@ -9,7 +9,7 @@
         <div class="col-md-5">
           <div class="card">
             <div class="card-body">
-              <form>
+              <form @submit="">
                 <div class="form-group">
                   <input type="text" placeholder="Insert a new task" class="form-control">
                 </div>
@@ -27,3 +27,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      task: {
+        title: '',
+        description: ''
+      }
+    }
+  }
+}
+</script>
