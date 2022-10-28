@@ -40,24 +40,6 @@ const calculateClass = computed(() => {
   </ul>
 </template>
 
-<style>
-h1 {
-  color: red;
-}
-
-h2 {
-  color: white;
-}
-
-.positive {
-  background-color: green;
-}
-
-.negative {
-  background-color: red;
-}
-
-.zero {
-  background-color: gray;
-}
+<style lang="scss">
+@import "./assets/style.scss";
 </style>
