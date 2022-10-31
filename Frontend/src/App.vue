@@ -1,45 +1,15 @@
 <script setup>
-import { ref, computed } from 'vue'
-
-const msg = 'Hello World';
-const counter = ref(0);
-
-const favoriteNumbers = ref([]);
-
-const increment = () => counter.value++;
-const decrement = () => counter.value--;
-const resetCounter = () => counter.value = 0;
-const addFavoriteNumber = () => favoriteNumbers.value.push(counter.value);
-
-const isFavoriteNumber = computed(() => {
-  const numberSearch = favoriteNumbers.value.find(n => n === counter.value)
-  if (numberSearch === 0) return true;
-  return numberSearch || false;
-});
-
-const calculateClass = computed(() => {
-  if (counter.value < 0) return 'negative';
-  if (counter.value > 0) return 'positive';
-  return 'zero';
-});
+import { RouterLink, RouterView } from 'vue-router';
+import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <h1>{{ msg.toUpperCase() }}!!</h1>
-  <button @click="increment">Increment</button>
-  <button @click="decrement">Decrement</button>
-  <button @click="resetCounter">Reset</button>
-  <button :disabled="isFavoriteNumber" @click="addFavoriteNumber">Add Favorite Number</button>
-  <h2 :class="calculateClass">
-    {{ counter }}
-  </h2>
-  <ul>
-    <li v-for="number in favoriteNumbers" :key="number">
-      {{ number }}
-    </li>
-  </ul>
+  <div class="main-container">
+    <Navbar />
+    <RouterView />
+  </div>
 </template>
 
 <style lang="scss">
-@import "./assets/style.scss";
+@import "./assets/styles/main.scss";
 </style>
