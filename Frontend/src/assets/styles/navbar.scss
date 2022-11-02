@@ -5,11 +5,20 @@
   align-items: center;
   flex-direction: row;
   background-color: lightskyblue;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 
   .navbar-item {
     text-decoration: none;
+    color: black;
+    font-size: 1.3vw;
+
+    .title {
+      font-size: 2vw;
+      font-weight: bold;
+      font-family: 'Pacifico', cursive;
+      font-style: italic;
+    }
   }
 
   .navbar-start {
@@ -17,5 +26,11 @@
     flex-direction: row;
     gap: 2vw;
     color: orange;
+
+    .navbar-item {
+      color: black;
+      font-size: 1.4vw;
+      font-style: italic;
+    }
   }
 }

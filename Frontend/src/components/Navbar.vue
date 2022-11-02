@@ -12,7 +12,15 @@ import { RouterLink, RouterView } from 'vue-router';
       </div>
       <div class="navbar-menu">
         <div class="navbar-start">
+          <!-- Home -->
           <RouterLink to="/" class="navbar-item">Home</RouterLink>
+          <!-- Create task -->
+          <RouterLink to="/tasks/new" class="navbar-item">Create task</RouterLink>
+          <!-- Edit task -->
+          <RouterLink to="/tasks/edit" class="navbar-item">Edit task</RouterLink>
+          <!-- Delete task -->
+          <RouterLink to="/tasks/delete" class="navbar-item">Delete task</RouterLink>
+          <!-- About app -->
           <RouterLink to="/about" class="navbar-item">About</RouterLink>
         </div>
       </div>
